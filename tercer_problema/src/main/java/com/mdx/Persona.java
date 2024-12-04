@@ -55,8 +55,8 @@ public class Persona {
         this.cartilla_en_regla = cartilla;
     }
 
-    public void to_string(){
-        System.out.println("Sano: " + sano + "\nSintomas: " + sintomas + "\nContacto: " + contacto + "\nPasado Covid: " + pasado_covid + "\nCartilla en regla: " + cartilla_en_regla);
+    public String to_string(){
+        return ("Sano: " + sano + "\nSintomas: " + sintomas + "\nContacto: " + contacto + "\nPasado Covid: " + pasado_covid + "\nCartilla en regla: " + cartilla_en_regla);
     }
 
 

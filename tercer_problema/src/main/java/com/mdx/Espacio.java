@@ -38,7 +38,7 @@ public class Espacio {
         return  nublado;
     }
 
-    public int aforo_max_actividad(){
+    public int get_aforo_max_actividad(){
         return aforo_max;
     }
 
