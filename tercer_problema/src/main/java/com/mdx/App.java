@@ -14,8 +14,9 @@ public class App implements Constantes, Opciones {
 			TECLADO.nextLine();
 			seguir=true;
 		} catch(InputMismatchException e) {
-			
+			TECLADO.next();
 			System.out.println("Error, no ha introducido un número entero, por favor, inténtelo de nuevo");
+
 		}
 		}while (!seguir);
 		return lectura;
