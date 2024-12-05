@@ -1,4 +1,4 @@
-##Identificar las variables que se deben tener en cuenta para probar el método de interés.
+## Identificar las variables que se deben tener en cuenta para probar el método de interés.
         - sana: boolean
         - sintomas: boolean
         - contacto: boolean
@@ -12,7 +12,7 @@
         - aforo_max: int
         - confinada: boolean
 
-##Calcular el número máximo posible de casos de pruebas que se podrían generar a partir de los valores de pruebas (combinatoria).
+## Calcular el número máximo posible de casos de pruebas que se podrían generar a partir de los valores de pruebas (combinatoria).
         - sana: 2
         - sintomas: 2
         - contacto: 2
