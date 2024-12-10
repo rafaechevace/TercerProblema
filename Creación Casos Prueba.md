@@ -54,60 +54,7 @@
         - confinada: 2
         
 <<<<<<< HEAD
-        - TOTAL = 2^169
-
-
-## Punto 7: Cobertura de Decisiones
-
-### Casos de Prueba
-
-| Decisión | Resultado | Expresión                                                                                     |
-|----------|-----------|-----------------------------------------------------------------------------------------------|
-| D1       | True      | (sano AND NOT sintomas AND NOT contacto AND pasado_covid AND cartilla_en_regla)               |
-| D1       | False     | (sano AND NOT sintomas AND NOT contacto AND pasado_covid AND cartilla_en_regla)               |
-| D2       | True      | temperatura < 0 AND humedad < 15 AND (nieva OR llueve)                                        |
-| D2       | False     | temperatura < 0 AND humedad < 15 AND (nieva OR llueve)                                        |
-| D3       | True      | temperatura < 0 AND humedad < 15 AND NOT (nieva OR llueve)                                    |
-| D3       | False     | temperatura < 0 AND humedad < 15 AND NOT (nieva OR llueve)                                    |
-| D4       | True      | 0 ≤ temperatura < 15 AND NOT llueve                                                           |
-| D4       | False     | 0 ≤ temperatura < 15 AND NOT llueve                                                           |
-| D5       | True      | 15 ≤ temperatura < 25 AND NOT llueve AND NOT nublado AND humedad ≤ 60                         |
-| D5       | False     | 15 ≤ temperatura < 25 AND NOT llueve AND NOT nublado AND humedad ≤ 60                         |
-| D6       | True      | 25 ≤ temperatura < 35 AND NOT llueve                                                          |
-| D6       | False     | 25 ≤ temperatura < 35 AND NOT llueve                                                          |
-| D7       | True      | temperatura > 30 AND NOT llueve                                                               |
-| D7       | False     | temperatura > 30 AND NOT llueve                                                               |
-
-
-## Punto 8: Cobertura MC/DC
-
-### Casos de Prueba para MC/DC
-
-| Decisión | Condición                                     | Resultado |
-|----------|----------------------------------------------|-----------|
-| D1       | sano                                         | Afecta    |
-| D1       | NOT sintomas                                 | Afecta    |
-| D1       | NOT contacto                                 | Afecta    |
-| D1       | pasado_covid                                 | Afecta    |
-| D1       | cartilla_en_regla                            | Afecta    |
-| D2       | temperatura < 0                              | Afecta    |
-| D2       | humedad < 15                                 | Afecta    |
-| D2       | (nieva OR llueve)                            | Afecta    |
-| D3       | temperatura < 0                              | Afecta    |
-| D3       | humedad < 15                                 | Afecta    |
-| D3       | NOT (nieva OR llueve)                        | Afecta    |
-| D4       | 0 ≤ temperatura < 15                         | Afecta    |
-| D4       | NOT llueve                                   | Afecta    |
-| D5       | 15 ≤ temperatura < 25                        | Afecta    |
-| D5       | NOT llueve                                   | Afecta    |
-| D5       | NOT nublado                                  | Afecta    |
-| D5       | humedad ≤ 60                                 | Afecta    |
-| D6       | 25 ≤ temperatura < 35                        | Afecta    |
-| D6       | NOT llueve                                   | Afecta    |
-| D7       | temperatura > 30                             | Afecta    |
-| D7       | NOT llueve                                   | Afecta    |
-=======
-        - TOTAL = 946176
+        - TOTAL = 2^169                                                             |
         
 
 ## Defina un conjunto de casos de pruebas para cumplir con each use (cada valor una vez)
@@ -199,10 +146,58 @@
 
 ## Para los trozos de código que incluyan decisiones, proponga conjunto de casos de prueba para alcanzar cobertura de decisiones
 
+## Punto 7: Cobertura de Decisiones
+
+### Casos de Prueba
+
+| Decisión | Resultado | Expresión                                                                                     |
+|----------|-----------|-----------------------------------------------------------------------------------------------|
+| D1       | True      | (sano AND NOT sintomas AND NOT contacto AND pasado_covid AND cartilla_en_regla)               |
+| D1       | False     | (sano AND NOT sintomas AND NOT contacto AND pasado_covid AND cartilla_en_regla)               |
+| D2       | True      | temperatura < 0 AND humedad < 15 AND (nieva OR llueve)                                        |
+| D2       | False     | temperatura < 0 AND humedad < 15 AND (nieva OR llueve)                                        |
+| D3       | True      | temperatura < 0 AND humedad < 15 AND NOT (nieva OR llueve)                                    |
+| D3       | False     | temperatura < 0 AND humedad < 15 AND NOT (nieva OR llueve)                                    |
+| D4       | True      | 0 ≤ temperatura < 15 AND NOT llueve                                                           |
+| D4       | False     | 0 ≤ temperatura < 15 AND NOT llueve                                                           |
+| D5       | True      | 15 ≤ temperatura < 25 AND NOT llueve AND NOT nublado AND humedad ≤ 60                         |
+| D5       | False     | 15 ≤ temperatura < 25 AND NOT llueve AND NOT nublado AND humedad ≤ 60                         |
+| D6       | True      | 25 ≤ temperatura < 35 AND NOT llueve                                                          |
+| D6       | False     | 25 ≤ temperatura < 35 AND NOT llueve                                                          |
+| D7       | True      | temperatura > 30 AND NOT llueve                                                               |
+| D7       | False     | temperatura > 30 AND NOT llueve  
 
 
 ## Para los trozos de código que incluyan decisiones, proponga conjunto de casos de prueba para alcanzar cobertura MC/DC
+## Punto 8: Cobertura MC/DC
 
+### Casos de Prueba para MC/DC
+
+| Decisión | Condición                                     | Resultado |
+|----------|----------------------------------------------|-----------|
+| D1       | sano                                         | Afecta    |
+| D1       | NOT sintomas                                 | Afecta    |
+| D1       | NOT contacto                                 | Afecta    |
+| D1       | pasado_covid                                 | Afecta    |
+| D1       | cartilla_en_regla                            | Afecta    |
+| D2       | temperatura < 0                              | Afecta    |
+| D2       | humedad < 15                                 | Afecta    |
+| D2       | (nieva OR llueve)                            | Afecta    |
+| D3       | temperatura < 0                              | Afecta    |
+| D3       | humedad < 15                                 | Afecta    |
+| D3       | NOT (nieva OR llueve)                        | Afecta    |
+| D4       | 0 ≤ temperatura < 15                         | Afecta    |
+| D4       | NOT llueve                                   | Afecta    |
+| D5       | 15 ≤ temperatura < 25                        | Afecta    |
+| D5       | NOT llueve                                   | Afecta    |
+| D5       | NOT nublado                                  | Afecta    |
+| D5       | humedad ≤ 60                                 | Afecta    |
+| D6       | 25 ≤ temperatura < 35                        | Afecta    |
+| D6       | NOT llueve                                   | Afecta    |
+| D7       | temperatura > 30                             | Afecta    |
+| D7       | NOT llueve                                   | Afecta    |
+=======
+        - TOTAL = 946176
 
 
 ## Comente los resultados del número de los casos de pruebas conseguidos en los apartados 4, 5 y 6 ¿qué podría decirse de la cobertura alcanzada?
