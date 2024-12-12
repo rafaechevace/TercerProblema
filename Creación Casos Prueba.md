@@ -53,7 +53,6 @@
         - aforo_max: 6
         - confinada: 2
         
-<<<<<<< HEAD
         - TOTAL = 2^169                                                             |
         
 
@@ -144,62 +143,41 @@
 | true  | true     | false    | true         | false             | 16          | 12      | true  | false  | false   | 400       | false     |
 
 
-## Para los trozos de código que incluyan decisiones, proponga conjunto de casos de prueba para alcanzar cobertura de decisiones
-
-## Punto 7: Cobertura de Decisiones
-
-### Casos de Prueba
-
-| Decisión | Resultado | Expresión                                                                                     |
-|----------|-----------|-----------------------------------------------------------------------------------------------|
-| D1       | True      | (sano AND NOT sintomas AND NOT contacto AND pasado_covid AND cartilla_en_regla)               |
-| D1       | False     | (sano AND NOT sintomas AND NOT contacto AND pasado_covid AND cartilla_en_regla)               |
-| D2       | True      | temperatura < 0 AND humedad < 15 AND (nieva OR llueve)                                        |
-| D2       | False     | temperatura < 0 AND humedad < 15 AND (nieva OR llueve)                                        |
-| D3       | True      | temperatura < 0 AND humedad < 15 AND NOT (nieva OR llueve)                                    |
-| D3       | False     | temperatura < 0 AND humedad < 15 AND NOT (nieva OR llueve)                                    |
-| D4       | True      | 0 ≤ temperatura < 15 AND NOT llueve                                                           |
-| D4       | False     | 0 ≤ temperatura < 15 AND NOT llueve                                                           |
-| D5       | True      | 15 ≤ temperatura < 25 AND NOT llueve AND NOT nublado AND humedad ≤ 60                         |
-| D5       | False     | 15 ≤ temperatura < 25 AND NOT llueve AND NOT nublado AND humedad ≤ 60                         |
-| D6       | True      | 25 ≤ temperatura < 35 AND NOT llueve                                                          |
-| D6       | False     | 25 ≤ temperatura < 35 AND NOT llueve                                                          |
-| D7       | True      | temperatura > 30 AND NOT llueve                                                               |
-| D7       | False     | temperatura > 30 AND NOT llueve  
+## Para los trozos de código que incluyan decisiones, proponga conjunto de casos de prueba para
+alcanzar cobertura de decisiones
+| Caso | sana  | sintomas | contacto | pasado_covid | cartilla_en_regla | temperatura | humedad | nieva | llueve | nublado | aforo_actual | aforo_max | confinada | Actividad Esperada |
+|------|-------|----------|----------|--------------|-------------------|-------------|---------|-------|--------|---------|--------------|-----------|-----------|-------------------|
+| 1    | false | false    | false    | false        | false             | -20         | 10      | false | false  | false   | 0            | 10        | false     | NADA              |
+| 2    | true  | false    | false    | true         | true              | -10         | 10      | true  | false  | false   | 0            | 10        | false     | CASA              |
+| 3    | true  | false    | false    | true         | true              | -5          | 10      | false | false  | false   | 0            | 10        | false     | ESQUIAR           |
+| 4    | true  | false    | false    | true         | true              | 5           | 50      | false | false  | false   | 0            | 10        | false     | SENDERISMO        |
+| 5    | true  | false    | false    | true         | true              | 16          | 50      | false | false  | false   | 0            | 10        | false     | TURISMO           |
+| 6    | true  | false    | false    | true         | true              | 25          | 50      | false | false  | false   | 0            | 10        | false     | CAÑAS            |
+| 7    | true  | false    | false    | true         | true              | 30          | 50      | false | false  | false   | 0            | 10        | false     | PISCINA           |
+| 8    | true  | false    | false    | true         | true              | 30          | 50      | false | false  | false   | 10           | 10        | false     | PLAYA             |
 
 
-## Para los trozos de código que incluyan decisiones, proponga conjunto de casos de prueba para alcanzar cobertura MC/DC
-## Punto 8: Cobertura MC/DC
-
-### Casos de Prueba para MC/DC
-
-| Decisión | Condición                                     | Resultado |
-|----------|----------------------------------------------|-----------|
-| D1       | sano                                         | Afecta    |
-| D1       | NOT sintomas                                 | Afecta    |
-| D1       | NOT contacto                                 | Afecta    |
-| D1       | pasado_covid                                 | Afecta    |
-| D1       | cartilla_en_regla                            | Afecta    |
-| D2       | temperatura < 0                              | Afecta    |
-| D2       | humedad < 15                                 | Afecta    |
-| D2       | (nieva OR llueve)                            | Afecta    |
-| D3       | temperatura < 0                              | Afecta    |
-| D3       | humedad < 15                                 | Afecta    |
-| D3       | NOT (nieva OR llueve)                        | Afecta    |
-| D4       | 0 ≤ temperatura < 15                         | Afecta    |
-| D4       | NOT llueve                                   | Afecta    |
-| D5       | 15 ≤ temperatura < 25                        | Afecta    |
-| D5       | NOT llueve                                   | Afecta    |
-| D5       | NOT nublado                                  | Afecta    |
-| D5       | humedad ≤ 60                                 | Afecta    |
-| D6       | 25 ≤ temperatura < 35                        | Afecta    |
-| D6       | NOT llueve                                   | Afecta    |
-| D7       | temperatura > 30                             | Afecta    |
-| D7       | NOT llueve                                   | Afecta    |
-=======
-        - TOTAL = 946176
+## Para los trozos de código que incluyan decisiones, proponga conjunto de casos de prueba para
+alcanzar cobertura MC/DC
+| Caso | sana  | sintomas | contacto | pasado_covid | cartilla_en_regla | temperatura | humedad | nieva | llueve | nublado | aforo_actual | aforo_max | confinada | Actividad Esperada |
+|------|-------|----------|----------|--------------|-------------------|-------------|---------|-------|--------|---------|--------------|-----------|-----------|-------------------|
+| 1    | false | false    | false    | false        | false             | -20         | 10      | false | false  | false   | 0            | 10        | false     | NADA              |
+| 2    | true  | false    | false    | true         | true              | -10         | 10      | true  | false  | false   | 0            | 10        | false     | CASA              |
+| 3    | true  | false    | false    | true         | true              | -5          | 10      | false | false  | false   | 0            | 10        | false     | ESQUIAR           |
+| 4    | true  | false    | false    | true         | true              | 5           | 50      | false | false  | false   | 0            | 10        | false     | SENDERISMO        |
+| 5    | true  | false    | false    | true         | true              | 16          | 50      | false | false  | false   | 0            | 10        | false     | TURISMO           |
+| 6    | true  | false    | false    | true         | true              | 25          | 50      | false | false  | false   | 0            | 10        | false     | CAÑAS            |
+| 7    | true  | false    | false    | true         | true              | 30          | 50      | false | false  | false   | 0            | 10        | false     | PISCINA           |
+| 8    | true  | false    | false    | true         | true              | 30          | 50      | false | false  | false   | 10           | 10        | false     | PLAYA             |
+| 9    | true  | true     | false    | true         | true              | 5           | 50      | false | false  | false   | 0            | 10        | false     | NADA              |
+| 10   | true  | false    | true     | true         | true              | 16          | 50      | false | false  | false   | 0            | 10        | false     | NADA              |
+| 11   | true  | false    | false    | false        | true              | 16          | 50      | false | false  | false   | 0            | 10        | false     | NADA              |
+| 12   | true  | false    | false    | true         | false             | 16          | 50      | false | false  | false   | 0            | 10        | false     | NADA              |
+| 13   | true  | false    | false    | true         | true              | -5          | 10      | false | true   | false   | 0            | 10        | false     | NADA              |
+| 14   | true  | false    | false    | true         | true              | 16          | 50      | false | false  | true    | 0            | 10        | false     | NADA              |
+| 15   | true  | false    | false    | true         | true              | 16          | 100     | false | false  | false   | 0            | 10        | false     | NADA              |
+| 16   | true  | false    | false    | true         | true              | 16          | 50      | false | false  | false   | 0            | 0         | false     | NADA              |
 
 
 ## Comente los resultados del número de los casos de pruebas conseguidos en los apartados 4, 5 y 6 ¿qué podría decirse de la cobertura alcanzada?
 En el apartado 4 nos da un resultado desorbitado que, aunque cubra completamente todo el código, no merece la pena. En los apartados 5 y 6 se reducen muchísimo el número de casos de prueba a realizar y se consigue una cobertura muy parecida en cuanto a extensión.
->>>>>>> f99da397ee2786e129ba81dc50e82cabd2df2938
