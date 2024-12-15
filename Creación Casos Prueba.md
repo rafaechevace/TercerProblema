@@ -152,9 +152,9 @@ alcanzar cobertura de decisiones
 | 3    | true  | false    | false    | true         | true              | -5          | 10      | false | false  | false   | 0            | 10        | false     | ESQUIAR           |
 | 4    | true  | false    | false    | true         | true              | 5           | 50      | false | false  | false   | 0            | 10        | false     | SENDERISMO        |
 | 5    | true  | false    | false    | true         | true              | 16          | 50      | false | false  | false   | 0            | 10        | false     | TURISMO           |
-| 6    | true  | false    | false    | true         | true              | 25          | 50      | false | false  | false   | 0            | 10        | false     | CAÑAS            |
-| 7    | true  | false    | false    | true         | true              | 30          | 50      | false | false  | false   | 0            | 10        | false     | PISCINA           |
-| 8    | true  | false    | false    | true         | true              | 30          | 50      | false | false  | false   | 10           | 10        | false     | PLAYA             |
+| 6    | true  | false    | false    | true         | true              | 26          | 50      | false | false  | false   | 0            | 10        | false     | CAÑAS            |
+| 7    | true  | false    | false    | true         | true              | 31          | 50      | false | false  | false   | 0            | 10        | false     | PISCINA           |
+| 8    | true  | false    | false    | true         | true              | 36          | 50      | false | false  | false   | 10           | 10        | false     | PLAYA             |
 
 
 ## Para los trozos de código que incluyan decisiones, proponga conjunto de casos de prueba para
