@@ -119,7 +119,7 @@ public class App implements Constantes, Opciones {
 			} else if ((espacio.get_temperatura()>=QUINCE&&espacio.get_temperatura()<=TEMPLADO)&&!espacio.get_llueve()&&!espacio.get_nublado()&&espacio.get_humedad()<=MUCHAH&&!espacio.get_confinada()){
 				actividad=TURISMO;
 			} else if ((espacio.get_temperatura()>=TEMPLADO&&espacio.get_temperatura()<=MUCHOCALOR)&&!espacio.get_llueve()&&(aforo_actual+1<=espacio.get_aforo_max_actividad())){
-				actividad=CAÑAS;
+				actividad=CANAS;
 			}else if(espacio.get_temperatura()>=CALOR&&!espacio.get_llueve()){
 				actividad=PISCINA;
 				if (aforo_actual+1>=espacio.get_aforo_max_actividad()){

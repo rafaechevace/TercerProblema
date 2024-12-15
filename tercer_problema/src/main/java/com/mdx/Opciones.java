@@ -7,7 +7,7 @@ public interface Opciones {
     String ESQUIAR= "Ir a esquiar";
     String SENDERISMO="Senderismo";
     String TURISMO="Turismo al aire libre";
-    String CAÑAS="Irse de cañas";
+    String CANAS="Irse de cañas";
     String PLAYA="Playa";
     String PISCINA="Piscina";
 }
