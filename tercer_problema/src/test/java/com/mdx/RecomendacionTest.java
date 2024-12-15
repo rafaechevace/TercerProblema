@@ -1,22 +1,11 @@
 package com.mdx;
 
 import static org.junit.jupiter.api.Assertions.*;
-import java.io.ByteArrayInputStream;
-import java.io.InputStream;
 
-import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Test;
 
 class RecomendacionTest {
 
-    private final InputStream systemInBackup = System.in; // Respaldo de System.in
-
-    @AfterEach
-    void restoreSystemIn() {
-        System.setIn(systemInBackup); // Restaurar System.in después de cada prueba
-    }
-
-    // Test Obligatorios
     @Test
     void testCaso1_Nada() {
         Persona p = new Persona(false, false, false, false, false);
