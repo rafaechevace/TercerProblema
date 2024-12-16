@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.mdx.OpcionNoValidaExceptionTest" time="0.009" tests="2" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.mdx.AppTest" time="0.169" tests="11" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="21"/>
     <property name="sun.cpu.isalist" value="amd64"/>
@@ -58,6 +58,15 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="65.0"/>
   </properties>
-  <testcase name="testExceptionInheritance" classname="com.mdx.OpcionNoValidaExceptionTest" time="0.002"/>
-  <testcase name="testConstructorWithMessage" classname="com.mdx.OpcionNoValidaExceptionTest" time="0.002"/>
+  <testcase name="testToString" classname="com.mdx.AppTest" time="0.057"/>
+  <testcase name="testCrearEspacio_InvalidThenValidInput" classname="com.mdx.AppTest" time="0.013"/>
+  <testcase name="testLecturaNumero_InvalidThenValidInput" classname="com.mdx.AppTest" time="0.003"/>
+  <testcase name="testSettersAndGettersPersona" classname="com.mdx.AppTest" time="0.005"/>
+  <testcase name="testLecturaOpcion_ValidInputYes" classname="com.mdx.AppTest" time="0.003"/>
+  <testcase name="testCrearPersona_ValidInput" classname="com.mdx.AppTest" time="0.003"/>
+  <testcase name="testCrearEspacio_ValidInput" classname="com.mdx.AppTest" time="0.004"/>
+  <testcase name="testCrearPersona_InvalidThenValidInput" classname="com.mdx.AppTest" time="0.003"/>
+  <testcase name="testLecturaOpcion_ValidInputNo" classname="com.mdx.AppTest" time="0.002"/>
+  <testcase name="testLecturaOpcion_InvalidThenValidInput" classname="com.mdx.AppTest" time="0.003"/>
+  <testcase name="testLecturaNumero_ValidInput" classname="com.mdx.AppTest" time="0.003"/>
 </testsuite>

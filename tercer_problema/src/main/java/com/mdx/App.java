@@ -1,6 +1,7 @@
 package com.mdx;
 
 import java.util.InputMismatchException;
+import java.util.Scanner;
 
 public class App implements Constantes, Opciones {
     
