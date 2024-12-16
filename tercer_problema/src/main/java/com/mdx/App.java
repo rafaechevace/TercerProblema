@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 public class App implements Constantes, Opciones {
     
-       public static int lectura_numero(Scanner scanner) {
+       public static int lectura_numero(Scanner scanner) {//explicación de por qué pasamos el escáner por parámetro en el main
         int lectura = 0;
         boolean inputValido = false;
 
